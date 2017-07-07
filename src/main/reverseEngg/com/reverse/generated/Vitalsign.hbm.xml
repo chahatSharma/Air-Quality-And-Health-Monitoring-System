@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Vitalsign" table="vitalsign" catalog="webtools" optimistic-lock="version">
+        <id name="vitalSignId" type="long">
+            <column name="VitalSignId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="patient" class="com.reverse.generated.Patient" fetch="select">
+            <column name="PatientId" />
+            <column name="PersonId" />
+        </many-to-one>
+        <property name="captureDate" type="date">
+            <column name="CaptureDate" length="10" />
+        </property>
+        <property name="respirationRate" type="java.lang.Integer">
+            <column name="RespirationRate" />
+        </property>
+        <property name="heartRate" type="java.lang.Integer">
+            <column name="HeartRate" />
+        </property>
+        <property name="weight" type="java.lang.Integer">
+            <column name="Weight" />
+        </property>
+        <property name="sysBp" type="java.lang.Integer">
+            <column name="SysBP" />
+        </property>
+        <set name="symptomsreporteds" table="symptomsreported" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="VitalSignId" />
+            </key>
+            <one-to-many class="com.reverse.generated.Symptomsreported" />
+        </set>
+    </class>
+</hibernate-mapping>

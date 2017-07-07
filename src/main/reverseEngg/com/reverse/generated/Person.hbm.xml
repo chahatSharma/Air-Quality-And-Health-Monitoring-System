@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Person" table="person" catalog="webtools" optimistic-lock="version">
+        <id name="personId" type="long">
+            <column name="PersonId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="addressByOfficeAddressId" class="com.reverse.generated.Address" fetch="select">
+            <column name="OfficeAddressID" />
+        </many-to-one>
+        <many-to-one name="addressByHomeAddressId" class="com.reverse.generated.Address" fetch="select">
+            <column name="HomeAddressID" />
+        </many-to-one>
+        <property name="firstName" type="string">
+            <column name="FirstName" length="150" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LastName" length="150" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="emailId" type="string">
+            <column name="emailId" length="100" />
+        </property>
+        <set name="patients" table="patient" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PersonId" not-null="true" />
+            </key>
+            <one-to-many class="com.reverse.generated.Patient" />
+        </set>
+    </class>
+</hibernate-mapping>

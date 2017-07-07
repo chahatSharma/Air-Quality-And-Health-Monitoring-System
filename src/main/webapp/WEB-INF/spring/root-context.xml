@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="homeValidator" class="com.neu.business.HomeController"></bean>
+		<bean id="signupValidator" class="com.neu.business.SignUpController"></bean>
+		<bean id="detailsValidator" class="com.neu.business.AddPersonDetailsController"></bean>
+		<bean id="interceptor" class="com.neu.business.AuditableInterceptor"></bean>
+		<bean id="vitalSignValidator" class="com.neu.business.VitalSignValidator"></bean>
+ 		<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		 <property name="host" value="smtp.gmail.com" />  
+    <property name="username" value="chahat.sharma87@gmail.com" />  
+    <property name="password" value="G0ldl3af*" />  
+    <property name="javaMailProperties">  
+       <props>  
+              <prop key="mail.smtp.auth">true</prop>  
+              <prop key="mail.smtp.socketFactory.port">465</prop>  
+              <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>  
+              <prop key="mail.smtp.port">465</prop>  
+        </props>  
+    </property>
+      
+		</bean>
+		<bean id="mailMail" class="com.neu.business.MailMail">  
+    <property name="mailSender" ref="mailSender" />  
+</bean>
+</beans>

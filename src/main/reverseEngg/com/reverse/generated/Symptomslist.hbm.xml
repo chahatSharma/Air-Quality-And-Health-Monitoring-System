@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Symptomslist" table="symptomslist" catalog="webtools" optimistic-lock="version">
+        <id name="symptomsId" type="long">
+            <column name="SymptomsId" />
+            <generator class="assigned" />
+        </id>
+        <property name="symptomsDescription" type="string">
+            <column name="`Symptoms Description`" length="200" />
+        </property>
+        <property name="activeKey" type="java.lang.Character">
+            <column name="`Active Key`" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

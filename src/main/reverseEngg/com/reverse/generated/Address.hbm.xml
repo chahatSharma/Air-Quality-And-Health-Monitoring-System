@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Address" table="address" catalog="webtools" optimistic-lock="version">
+        <id name="addressId" type="long">
+            <column name="AddressID" />
+            <generator class="assigned" />
+        </id>
+        <property name="addressType" type="string">
+            <column name="AddressType" length="20" />
+        </property>
+        <property name="addressLine1" type="string">
+            <column name="AddressLine1" length="150" />
+        </property>
+        <property name="addressLine2" type="string">
+            <column name="AddressLine2" length="150" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="200" />
+        </property>
+        <property name="state" type="string">
+            <column name="State" length="100" />
+        </property>
+        <property name="zipcode" type="java.lang.Integer">
+            <column name="Zipcode" />
+        </property>
+        <property name="phoneNo" type="java.lang.Long">
+            <column name="PhoneNo" />
+        </property>
+        <set name="personsForOfficeAddressId" table="person" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OfficeAddressID" />
+            </key>
+            <one-to-many class="com.reverse.generated.Person" />
+        </set>
+        <set name="personsForHomeAddressId" table="person" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="HomeAddressID" />
+            </key>
+            <one-to-many class="com.reverse.generated.Person" />
+        </set>
+    </class>
+</hibernate-mapping>

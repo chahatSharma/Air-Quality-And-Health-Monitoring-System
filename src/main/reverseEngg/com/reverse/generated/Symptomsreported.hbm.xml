@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Symptomsreported" table="symptomsreported" catalog="webtools" optimistic-lock="version">
+        <id name="reportId" type="long">
+            <column name="ReportId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="patient" class="com.reverse.generated.Patient" fetch="select">
+            <column name="PatientId" />
+            <column name="PersonId" />
+        </many-to-one>
+        <many-to-one name="vitalsign" class="com.reverse.generated.Vitalsign" fetch="select">
+            <column name="VitalSignId" />
+        </many-to-one>
+        <property name="dateReported" type="date">
+            <column name="DateReported" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

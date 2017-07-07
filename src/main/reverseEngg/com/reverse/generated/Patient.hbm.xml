@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Patient" table="patient" catalog="webtools" optimistic-lock="version">
+        <composite-id name="id" class="com.reverse.generated.PatientId">
+            <key-property name="patientId" type="long">
+                <column name="PatientId" />
+            </key-property>
+            <key-property name="personId" type="long">
+                <column name="PersonId" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="person" class="com.reverse.generated.Person" update="false" insert="false" fetch="select">
+            <column name="PersonId" not-null="true" />
+        </many-to-one>
+        <set name="symptomsreporteds" table="symptomsreported" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PatientId" />
+                <column name="PersonId" />
+            </key>
+            <one-to-many class="com.reverse.generated.Symptomsreported" />
+        </set>
+        <set name="vitalsigns" table="vitalsign" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PatientId" />
+                <column name="PersonId" />
+            </key>
+            <one-to-many class="com.reverse.generated.Vitalsign" />
+        </set>
+        <set name="airqualities" table="airquality" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PatientId" />
+                <column name="PersonId" />
+            </key>
+            <one-to-many class="com.reverse.generated.Airquality" />
+        </set>
+    </class>
+</hibernate-mapping>

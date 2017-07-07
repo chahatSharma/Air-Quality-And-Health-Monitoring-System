@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2016 9:49:27 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.reverse.generated.Airquality" table="airquality" catalog="webtools" optimistic-lock="version">
+        <id name="airQualityId" type="long">
+            <column name="AirQualityId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="patient" class="com.reverse.generated.Patient" fetch="select">
+            <column name="PatientId" />
+            <column name="PersonId" />
+        </many-to-one>
+        <property name="tvoc" type="java.lang.Double">
+            <column name="tvoc" precision="22" scale="0" />
+        </property>
+        <property name="co2" type="java.lang.Double">
+            <column name="co2" precision="22" scale="0" />
+        </property>
+        <property name="co" type="java.lang.Double">
+            <column name="co" precision="22" scale="0" />
+        </property>
+        <property name="ozone" type="java.lang.Double">
+            <column name="ozone" precision="22" scale="0" />
+        </property>
+        <property name="temp" type="java.lang.Double">
+            <column name="temp" precision="22" scale="0" />
+        </property>
+        <property name="relHum" type="java.lang.Double">
+            <column name="relHum" precision="22" scale="0" />
+        </property>
+        <property name="dewPoint" type="java.lang.Double">
+            <column name="dewPoint" precision="22" scale="0" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="10" />
+        </property>
+        <property name="aqi" type="java.lang.Double">
+            <column name="AQI" precision="22" scale="0" />
+        </property>
+        <property name="pm10" type="java.lang.Double">
+            <column name="PM10" precision="22" scale="0" />
+        </property>
+        <property name="nox" type="java.lang.Double">
+            <column name="NOx" precision="22" scale="0" />
+        </property>
+        <property name="pm2dot5" type="java.lang.Double">
+            <column name="PM2Dot5" precision="22" scale="0" />
+        </property>
+        <property name="so2" type="java.lang.Double">
+            <column name="SO2" precision="22" scale="0" />
+        </property>
+        <property name="repPollutant" type="java.lang.Double">
+            <column name="repPollutant" precision="22" scale="0" />
+        </property>
+        <property name="captureDate" type="date">
+            <column name="CaptureDate" length="10" />
+        </property>
+        <property name="captureTime" type="java.lang.Short">
+            <column name="CaptureTime" />
+        </property>
+    </class>
+</hibernate-mapping>

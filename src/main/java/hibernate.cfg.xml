@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/webTools</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">angad</property>
+
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping class="com.neu.pojo.Doctor" />
+        <mapping class="com.neu.pojo.Person" />
+        <mapping class="com.neu.pojo.Workrequest" />
+        <mapping class="com.neu.pojo.Statelist" />
+        <mapping class="com.neu.pojo.Outdoorairquality" />
+        <mapping class="com.neu.pojo.Patient" />
+        <mapping class="com.neu.pojo.Symptomslist" />
+        <mapping class="com.neu.pojo.Vitalsign" />
+        <mapping class="com.neu.pojo.Citylist" />
+        <mapping class="com.neu.pojo.Logindetails" />
+        <mapping class="com.neu.pojo.Address" />
+        <mapping class="com.neu.pojo.Symptomsreported" />
+        <mapping class="com.neu.pojo.Indoorairquality" />
+        <mapping class="com.neu.pojo.Useraccount" />
+        <mapping class="com.neu.pojo.Publichealthofficer" />
+        <mapping class="com.neu.pojo.Mayor" />
+
+	</session-factory>
+</hibernate-configuration>

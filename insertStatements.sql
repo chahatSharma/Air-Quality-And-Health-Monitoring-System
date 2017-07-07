@@ -1,0 +1,15 @@
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (1,'Y',(current_timestamp()),current_timestamp(),'None');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (2,'Y',(current_timestamp()),current_timestamp(),'Suffocation');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (3,'Y',(current_timestamp()),current_timestamp(),'Head Ache');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (4,'Y',(current_timestamp()),current_timestamp(),'Nausea');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (5,'Y',(current_timestamp()),current_timestamp(),'Dizziness');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (6,'Y',(current_timestamp()),current_timestamp(),'Dermatitis');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (7,'Y',(current_timestamp()),current_timestamp(),'Eye/Nose/Throat/Respiratory Irritation');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (8,'Y',(current_timestamp()),current_timestamp(),'Coughing');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (9,'Y',(current_timestamp()),current_timestamp(),'Difficulty Concentrating');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (10,'Y',(current_timestamp()),current_timestamp(),'Sensitivity to Odors');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (11,'Y',(current_timestamp()),current_timestamp(),'Muscle pain');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (12,'Y',(current_timestamp()),current_timestamp(),'Infection');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (13,'Y',(current_timestamp()),current_timestamp(),'Fatigue');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (14,'Y',(current_timestamp()),current_timestamp(),'Allergy');
+insert into symptomslist(SymptomsId,ActiveKey,creationTime,modifiedTime,SymptomsDescription) values (15,'Y',(current_timestamp()),current_timestamp(),'Other');
